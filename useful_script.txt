@@ -1,0 +1,81 @@
+=========================================================
+==                   UNIX
+=========================================================
+
+>>>  Check whether a shared library .so is x86 or x64:
+  $ file libboost_system.so
+
+>>>  search recursively a string using grep
+  $ grep --include="*.*" -nRHI "SwapRate" *
+
+>>>  look for a file
+  $ find . -name "filename"
+
+>>>  look for the location of a command
+  $ whereis gcc
+
+
+=========================================================
+==                    git 
+=========================================================
+
+>>> update workspace
+  $ git fetch
+  $ git pull
+
+>>> commit changes
+  $ git add foo.txt
+  $ git commit -m "Changed foo.txt"
+  $ git push
+
+>>> store user name & password after first use
+  $ git config credential.helper store
+
+>>> reset (discard changes) of a file
+  $ git checkout foo.txt
+
+>>> select a particular file from another branch
+  $ git fetch
+  $ git checkout origin/dev src/instrument/fixedratebond.cpp -p
+
+
+=========================================================
+==                    vim 
+=========================================================
+
+>>>  remove all digits:
+  :%s/\d*//g
+
+>>>  remove all blank lines:
+  :g/^$/d
+
+>>>  add \\ at the end of each line:
+  :11,887s/$/ \\\\/g
+
+>>>  remove all lines except those with "Large":
+  :v/Large/d
+
+>>> change current word to capitals: gUw
+
+>>> match 1 plus 3 more digits: /1\(\d\{3\}\)
+
+>>> add % to the beginning of every line:
+  :11,887s/^/%/g
+
+
+
+
+=========================================================
+==                   Windows 
+=========================================================
+
+>>> If textlive runs slowly on windows when loading fonts, run fc-cache.exe as
+administrator may solve it.
+
+
+=========================================================
+==                   Excel 
+=========================================================
+
+>>> If an formula uses TRANSPOSE function, then one must use CTRL+SHIFT+ENTER
+to run it even if the final result is of only one cell.
