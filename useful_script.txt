@@ -14,6 +14,9 @@
 >>>  look for the location of a command
   $ whereis gcc
 
+>>>  check glibc version
+  $ ldd --version
+
 
 
 =========================================================
