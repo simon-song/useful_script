@@ -40,6 +40,9 @@ $ ln -s gmp-4.3.2 gmp # similarly for isl, mpc, mpfr
 >>> scp
 $ scp -P port -r file_or_dir username@120.24.6.34:/home/pengcheng
 
+>>> check Linux distribution version
+$ lsb_release -a
+
 
 =========================================================
 ==                    git 
