@@ -96,6 +96,12 @@ $ lsb_release -a
 >>> insert a blank line every 3 lines
    :%s/\v(.*\n){3}/&\r
 
+=========================================================
+==                   perl 
+=========================================================
+>>> find text starting with alphabeta then a digit then a punctuation mark
+>>> and remove the digit
+  $ perl -p -e 's/([a-z])([0-9])([,.:;?])/\1\3/g;' a.txt >a_out.txt
 
 
 =========================================================
