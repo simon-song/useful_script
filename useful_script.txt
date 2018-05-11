@@ -70,6 +70,8 @@ $ lsb_release -a
 
 =========================================================
 ==                    vim 
+==
+==   See also http://www.rayninfo.co.uk/vimtips.html
 =========================================================
 
 >>>  remove all digits:
@@ -91,6 +93,8 @@ $ lsb_release -a
 >>> add % to the beginning of every line:
   :11,887s/^/%/g
 
+>>> insert a blank line every 3 lines
+   :%s/\v(.*\n){3}/&\r
 
 
 
