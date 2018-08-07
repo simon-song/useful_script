@@ -67,6 +67,10 @@ $ lsb_release -a
   $ git fetch
   $ git checkout origin/dev src/instrument/fixedratebond.cpp -p
 
+>>> change the URL for a remote Git repository
+  $ git remote -v
+  $ git remote set-url origin https://github.com/usr/newrepo.git
+
 
 =========================================================
 ==                    vim 
