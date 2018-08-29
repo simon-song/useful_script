@@ -71,6 +71,12 @@ $ lsb_release -a
   $ git remote -v
   $ git remote set-url origin https://github.com/usr/newrepo.git
 
+=========================================================
+==                    python 3
+=========================================================
+>>> start a web server (must use --bind on WIN 10)
+  $ python -m http.server --bind 127.0.0.1
+
 
 =========================================================
 ==                    vim 
