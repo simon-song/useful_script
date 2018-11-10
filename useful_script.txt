@@ -106,6 +106,10 @@ $ lsb_release -a
 >>> insert a blank line every 3 lines
    :%s/\v(.*\n){3}/&\r
 
+>>> to fix error "Not an editor command: ^M": save the file using
+   :w ++ff=unix
+
+
 =========================================================
 ==                   perl 
 =========================================================
