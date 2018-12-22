@@ -77,6 +77,9 @@ $ lsb_release -a
 >>> start a web server (must use --bind on WIN 10)
   $ python -m http.server --bind 127.0.0.1
 
+>>> start a web server on Mac OS X (i.e. localhost:8000):
+  $ python -m SimpleHTTPServer 8000
+
 
 =========================================================
 ==                    vim 
