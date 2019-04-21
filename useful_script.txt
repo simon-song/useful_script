@@ -135,3 +135,11 @@ administrator may solve it.
 
 >>> If an formula uses TRANSPOSE function, then one must use CTRL+SHIFT+ENTER
 to run it even if the final result is of only one cell.
+
+=========================================================
+==                   PDF
+=========================================================
+
+>>> to break a pdf with 2 pages in one (may need Linux)
+    $ mutool poster -x 2 a.pdf a_out.pdf
+
