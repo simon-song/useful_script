@@ -172,3 +172,10 @@ mathparser was pre-built using this version.
 
 Be aware whether the library is built using ASMJIT_STATIC flag.
 
+=========================================================
+==                   PDF
+=========================================================
+
+>>> to break a pdf with 2 pages in one (may need Linux)
+    $ mutool poster -x 2 a.pdf a_out.pdf
+
