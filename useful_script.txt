@@ -168,6 +168,7 @@ mathparser may need to be rebuilt to eliminate link error.)
    (3.3) open xlw.sln with Visual Studio 2015, change
    General->TargetName and Librarian->General to vc140 (from vc120),
    then build the library (x86 Debug/Release, x64 Debug/Release).
+   The static libraries will be put at xlw/lib and xlw/lib/x64.
 
 >>> asmjit
 
