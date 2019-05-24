@@ -144,7 +144,8 @@ to run it even if the final result is of only one cell.
 >>> FRQF dependencies
 
 (1) boost libraries, both 32 bit and 64 bit built; recommended version 1_61_0 as
-mathparser was pre-built using this version.
+mathparser was pre-built using this version. (The x64-Debug version of
+mathparser may need to be rebuilt to eliminate link error.)
 
 (2) nlopt, need to be built 
   (2.1) 32 bit build
