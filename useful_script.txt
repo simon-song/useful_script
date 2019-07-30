@@ -136,6 +136,13 @@ administrator may solve it.
 >>> If an formula uses TRANSPOSE function, then one must use CTRL+SHIFT+ENTER
 to run it even if the final result is of only one cell.
 
+=========================================================
+==                   CMake
+=========================================================
+
+>>> to make a Release build
+   $ cmake -DCMAKE_BUILD_TYPE=Release ..
+
 
 =========================================================
 ==                  Visual Studio + C++ 
