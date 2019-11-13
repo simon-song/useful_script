@@ -71,6 +71,17 @@ $ lsb_release -a
   $ git remote -v
   $ git remote set-url origin https://github.com/usr/newrepo.git
 
+>>> To fix "error: RPC failed; result=22, HTTP code = 411"
+  $ git config http.postBuffer *bytes*
+  $ git config http.postBuffer 524288000 # for 500MB
+
+>>> branching (see https://github.com/joshnh/Git-Commands)
+  $ git branch      # list branches (the * denotes the current branch)
+  $ git branch -a   # list all branches (local and remote)
+  $ git branch [BRANCH_NAME]     # create a new branch
+  $ git branch -d [BRANCH_NAME]  # delete a branch
+  $ git checkout [BRANCH_NAME]   # swith to a branch
+
 =========================================================
 ==                    python 3
 =========================================================
