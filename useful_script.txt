@@ -22,27 +22,29 @@
 
 >>> install gcc-6.3.0
 
-$ wget http://ftp.gnu.org/gnu/gcc/gcc-6.3.0/gcc-6.3.0.tar.bz2
-$ tar xvfj gcc-6.3.0.tar.bz2
-$ cd gcc-6.3.0
-$ ./contrib/download_prerequisites
-$ mkdir build
-$ cd build
-$ ../configure -enable-checking=release -enable-languages=c,c++ -disable-multilib
-$ make  # this may take 1.5 hours
-$ sudo make install  # will be installed at /usr/local/lib64
+  $ wget http://ftp.gnu.org/gnu/gcc/gcc-6.3.0/gcc-6.3.0.tar.bz2
+  $ tar xvfj gcc-6.3.0.tar.bz2
+  $ cd gcc-6.3.0
+  $ ./contrib/download_prerequisites
+  $ mkdir build
+  $ cd build
+  $ ../configure -enable-checking=release -enable-languages=c,c++ -disable-multilib
+  $ make  # this may take 1.5 hours
+  $ sudo make install  # will be installed at /usr/local/lib64
 
 In case download is not allowed, copy files gmp-4.3.2.tar.bz2, isl-0.15.tar.bz2,
 mpc-0.8.1.tar.gz, mpfr-2.4.2.tar.bz2 to directory gcc-6.3.0, uncompress, then
 create a soft link for each directory:
-$ ln -s gmp-4.3.2 gmp # similarly for isl, mpc, mpfr
+  $ ln -s gmp-4.3.2 gmp # similarly for isl, mpc, mpfr
 
 >>> scp
-$ scp -P port -r file_or_dir username@120.24.6.34:/home/pengcheng
+  $ scp -P port -r file_or_dir username@120.24.6.34:/home/pengcheng
 
 >>> check Linux distribution version
-$ lsb_release -a
+  $ lsb_release -a
 
+>>> check whether an object file contains reference to a particular function
+  $ objdump -t calendar.cpp.o | grep Adjust
 
 =========================================================
 ==                    git 
