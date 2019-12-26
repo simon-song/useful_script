@@ -11,6 +11,12 @@
 >>>  look for a file
   $ find . -name "filename"
 
+>>> find out the number of files recursively in a directory
+  $ find . -name "*pp" | wc -l
+
+>>> find out the total number of lines of all files recursively in a directory
+  $ find . -name "*pp" | xargs cat | wc -l
+
 >>>  look for the location of a command
   $ whereis gcc
 
