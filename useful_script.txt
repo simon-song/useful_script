@@ -157,10 +157,28 @@ to run it even if the final result is of only one cell.
 
 =========================================================
 ==                   CMake
+==
+==  see https://nlopt.readthedocs.io/en/latest/NLopt_Installation/
+==  for example of building nlopt using CMake
 =========================================================
+
+>>> for MacOS / Linux
+   $ cmake -DCMAKE_BUILD_TYPE=Release -H"$(pwd)" -B"$(pwd)/cmake-build-release"
+   $ cmake -DCMAKE_BUILD_TYPE=Debug -H"$(pwd)" -B"$(pwd)/cmake-build-debug"
+   $ cd cmake-build-release
+   $ make
+
+>>> for Visual Studio 2015
+   $ cmake -G"Visual Studio 14 2015" -A x64 -B"cmake-vs2015"
+
+>>> for Visual Studio 2019
+   $ cmake -G "Visual Studio 16 2019" -A x64 -B"cmake-vs2019"
 
 >>> to make a Release build
    $ cmake -DCMAKE_BUILD_TYPE=Release ..
+
+>>> to build a static library 
+   $ cmake -DBUILD_SHARED_LIBS=OFF ..
 
 
 =========================================================
