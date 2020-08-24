@@ -120,6 +120,8 @@ create a soft link for each directory:
 
 >>> change current word to capitals: gUw
 
+>>> wrap text to 80 characters: gqG
+
 >>> match 1 plus 3 more digits: /1\(\d\{3\}\)
 
 >>> add % to the beginning of every line:
