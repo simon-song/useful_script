@@ -187,6 +187,29 @@ to run it even if the final result is of only one cell.
 ==                  Visual Studio + C++ 
 =========================================================
 
+>>> JDPL installation 
+
+Suppose the directory for JDPL is foo\jdpl. boost libraries must be 
+installed at foo\boost_1_74_0
+
+(1) set environment variable BOOST_ROOT and BOOST_INCLUDEDIR to
+foo\boost_1_74_0
+
+(2) get the code
+
+   $ git clone https://jcode.jdfmgt.com/git/jda.jdpl.git
+   $ git checkout develop
+
+(3) run cmake (using e.g. powershell)
+
+   $ cd foo\jdpl
+   $ cmake -G "Visual Studio 16 2019" -A x64 -B"cmake-vs2019"
+
+this will create jdpl.sln at foo\jdpl\cmake-vs2019.
+
+(4) open jdpl.sln with Visual Studio 2019 and compile the code.
+
+
 >>> FRQF dependencies
 
 (1) boost libraries, both 32 bit and 64 bit built; recommended version 1_61_0 as
