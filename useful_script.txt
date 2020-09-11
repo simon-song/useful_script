@@ -65,6 +65,9 @@ create a soft link for each directory:
   $ git commit -m "Changed foo.txt"
   $ git push
 
+>>> remove old user name and password
+  $ git config --global --unset credential.helper
+
 >>> store user name & password after first use
   $ git config credential.helper store
 
@@ -195,7 +198,7 @@ installed at foo\boost_1_74_0
 (1) set environment variable BOOST_ROOT and BOOST_INCLUDEDIR to
 foo\boost_1_74_0
 
-(2) get the code
+(2) get the code and switch to branch "develop"
 
    $ git clone https://jcode.jdfmgt.com/git/jda.jdpl.git
    $ git checkout develop
