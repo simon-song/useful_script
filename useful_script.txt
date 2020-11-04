@@ -114,6 +114,9 @@ create a soft link for each directory:
 
 >>>  remove all blank lines:
   :g/^$/d
+  
+>>>  replace newline by space
+  :%s/\n/ /g
 
 >>>  add \\ at the end of each line:
   :11,887s/$/ \\\\/g
@@ -123,9 +126,13 @@ create a soft link for each directory:
 
 >>> change current word to capitals: gUw
 
+>>> change all words to lowercase: guG
+
 >>> wrap text to 80 characters: gqG
 
 >>> match 1 plus 3 more digits: /1\(\d\{3\}\)
+
+>>> match [ then 2 digits then dot (.) then ]: /\[\d\{2}\.\]
 
 >>> add % to the beginning of every line:
   :11,887s/^/%/g
@@ -136,6 +143,8 @@ create a soft link for each directory:
 >>> to fix error "Not an editor command: ^M": save the file using
    :w ++ff=unix
 
+>>> remove all punctuation
+   $ cat in.txt | tr -d '[:punct:]' >out.txt
 
 =========================================================
 ==                   perl 
@@ -159,6 +168,9 @@ administrator may solve it.
 
 >>> If an formula uses TRANSPOSE function, then one must use CTRL+SHIFT+ENTER
 to run it even if the final result is of only one cell.
+
+>>> To insert multiple rows, select several rows, type Shift+space, then right click and click 
+on Insert.
 
 =========================================================
 ==                   CMake
