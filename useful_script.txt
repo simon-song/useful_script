@@ -26,11 +26,11 @@
 >>> check number of CPU cores
   $ nproc --all
 
->>> install gcc-6.3.0
+>>> install gcc-7.4.0
 
-  $ wget http://ftp.gnu.org/gnu/gcc/gcc-6.3.0/gcc-6.3.0.tar.bz2
-  $ tar xvfj gcc-6.3.0.tar.bz2
-  $ cd gcc-6.3.0
+  $ wget http://ftp.gnu.org/gnu/gcc/gcc-7.4.0/gcc-7.4.0.tar.gz
+  $ tar xvfz gcc-7.4.0.tar.gz
+  $ cd gcc-7.4.0
   $ ./contrib/download_prerequisites
   $ mkdir build
   $ cd build
