@@ -43,6 +43,21 @@ mpc-0.8.1.tar.gz, mpfr-2.4.2.tar.bz2 to directory gcc-6.3.0, uncompress, then
 create a soft link for each directory:
   $ ln -s gmp-4.3.2 gmp # similarly for isl, mpc, mpfr
 
+>>>  install boost_1_74_0 from source
+   $ tar xvfz boost_1_74_0.tar.gz
+   $ cd boost_1_74_0
+   $ ./bootstrap.sh
+   $ ./b2
+   $ sudo ./b2 install
+
+>>> jdpl 
+   $ git clone https://jcode.jdfmgt.com/git/jda.jdpl.git
+   $ cd jdpl
+   $ mkdir build_release
+   $ cd build_release
+   $ cmake3 -DCMAKE_BUILD_TYPE=Release ..
+   $ make
+
 >>> scp
   $ scp -P port -r file_or_dir username@120.24.6.34:/home/pengcheng
 
