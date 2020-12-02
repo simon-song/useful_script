@@ -53,6 +53,7 @@ create a soft link for each directory:
 >>> jdpl 
    $ git clone https://jcode.jdfmgt.com/git/jda.jdpl.git
    $ cd jdpl
+   $ git checkout develop  # switch to branch "develop"
    $ mkdir build_release
    $ cd build_release
    $ cmake3 -DCMAKE_BUILD_TYPE=Release ..
