@@ -302,6 +302,26 @@ project. Now you are ready to go.
 
 >>> to break a pdf with 2 pages in one (may need Linux)
     $ mutool poster -x 2 a.pdf a_out.pdf
+	
+>>>  adjust the brightness and contrast of a scanned PDF file
+
+echo "convert .pdf into a series of png ..."
+"C:/Program Files/ImageMagick-7.0.10-Q16-HDRI/convert.exe" -density 300 -resize
+25% a.pdf a.png
+
+echo "adjust the brightness and contrast of images ..."
+for ((num=1; num<=475; num++))
+do
+  tmp=$(printf "%03d" ${num})
+  origFile='a-'${tmp}'.png'
+  targetFile='b-'${tmp}'.png'
+  echo "processing ${origFile} file ..."
+  echo ${targetFile}
+  "C:/Program Files/ImageMagick-7.0.10-Q16-HDRI/convert.exe" -brightness-contrast 40x20 ${origFile} ${targetFile}
+done
+
+echo "convert png files to one pdf ..."
+"C:/Program Files/ImageMagick-7.0.10-Q16-HDRI/convert.exe" b-*.png c.pdf
 
 
 =========================================================
