@@ -167,6 +167,9 @@ create a soft link for each directory:
 
 >>> remove all punctuation
    $ cat in.txt | tr -d '[:punct:]' >out.txt
+   
+ >>>  remove text after : in each line  (see https://stackoverflow.com/questions/24111723/delete-all-characters-after-in-each-line/24112519)
+   :%s/[^:]*$//
 
 =========================================================
 ==                   perl 
