@@ -108,6 +108,7 @@ create a soft link for each directory:
   $ git branch [BRANCH_NAME]     # create a new branch
   $ git branch -d [BRANCH_NAME]  # delete a branch
   $ git checkout [BRANCH_NAME]   # swith to a branch
+  $ git push -u origin [BRANCH_NAME]   # push local branch to the remote repository
   
  >>> undoing last shared public changes (see also 
  https://www.atlassian.com/git/tutorials/undoing-changes)
