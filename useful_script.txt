@@ -68,6 +68,10 @@ create a soft link for each directory:
 >>> check whether an object file contains reference to a particular function
   $ objdump -t calendar.cpp.o | grep Adjust
 
+>>> check whether a library file is debug build
+  $ objdump --syms libJdaQuant.so | grep debug
+
+
 =========================================================
 ==                    git 
 =========================================================
@@ -363,3 +367,5 @@ $ brew update
 
 Example:
 @@||yourwebsite.com^
+
+sudo
