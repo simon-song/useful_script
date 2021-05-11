@@ -71,6 +71,8 @@ create a soft link for each directory:
 >>> check whether a library file is debug build
   $ objdump --syms libJdaQuant.so | grep debug
 
+>>> redirect report of boost.test to a file
+  $ ./test --report_level=detailed --report_sink=a.log
 
 =========================================================
 ==                    git 
