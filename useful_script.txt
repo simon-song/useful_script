@@ -341,6 +341,15 @@ done
 echo "convert png files to one pdf ..."
 "C:/Program Files/ImageMagick-7.0.10-Q16-HDRI/convert.exe" b-*.png c.pdf
 
+>>> pdftk examples
+
+pdftk wealth_of_nations_v1.pdf cat 1-end 77 output a1.pdf     # add blank page (p.77) to the end
+pdftk wealth_of_nations_v2.pdf cat 10-545 output a2.pdf
+pdftk a1.pdf a2.pdf cat output a.pdf                                   # combine a1 and a2
+pdftk a.pdf cat 4-450 output wm_p1.pdf                            # first part: book 1, 2
+pdftk a.pdf cat 76-82 77 77 451-763 output wm_p2.pdf   # second part: book 3,4
+pdftk a.pdf cat 76-82 77 764-end output wm_p3.pdf        # third part: book 5, index
+
 
 =========================================================
 ==                   Mac OS X
