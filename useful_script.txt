@@ -59,6 +59,14 @@ create a soft link for each directory:
    $ cmake3 -DCMAKE_BUILD_TYPE=Release ..
    $ make
 
+>>> install different gcc toolsets on centos
+  $ sudo yum install centos-release-scl
+  $ sudo yum install devtoolset-10-gcc devtoolset-10-gcc-c++    
+  $ scl enable devtoolset-10 -- bash      # enable gcc10 in shell
+
+>>> check libstdc++ version
+  $ strings /usr/lib64/libstdc++.so.6  |  grep LIBCXX
+
 >>> scp
   $ scp -P port -r file_or_dir username@120.24.6.34:/home/pengcheng
 
