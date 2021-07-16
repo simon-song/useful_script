@@ -50,7 +50,7 @@ create a soft link for each directory:
    $ ./b2
    $ sudo ./b2 install
 
->>> jdpl 
+>>> jdpl on Linux (e.g. Centos)
    $ git clone https://jcode.jdfmgt.com/git/jda.jdpl.git
    $ cd jdpl
    $ git checkout develop  # switch to branch "develop"
@@ -58,6 +58,9 @@ create a soft link for each directory:
    $ cd build_release
    $ cmake3 -DCMAKE_BUILD_TYPE=Release ..
    $ make
+   
+ You may need zlib to be installed on Centos:
+   $ sudo yum install zlib zlib-devel
 
 >>> install different gcc toolsets on centos
   $ sudo yum install centos-release-scl
