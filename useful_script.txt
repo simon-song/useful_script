@@ -382,6 +382,15 @@ $ source ~/.bash_profile
 
 $ brew update
 
+>>>  install boost_1_74_0 from source with g++-11
+   $ tar xvfz boost_1_74_0.tar.gz
+   $ cd boost_1_74_0
+   $ ./bootstrap.sh
+   $ echo "using darwin : 11.2 : /usr/local/bin/g++-11 ; " >> tools/build/src/user-config.jam
+   $ ./b2 --toolset=darwin-11.2
+   $ sudo ./b2 install
+See also https://stackoverflow.com/questions/5346454/building-boost-with-different-gcc-version/5346531#5346531
+
 
 =========================================================
 ==     user rules for PAC
