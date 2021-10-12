@@ -59,8 +59,15 @@ create a soft link for each directory:
    $ cmake3 -DCMAKE_BUILD_TYPE=Release ..
    $ make
    
- You may need zlib to be installed on Centos:
+You may need zlib to be installed on Centos:
    $ sudo yum install zlib zlib-devel
+
+FFTW needs to be built using -fPIC:
+   $ cd fftw-3.3.8
+   $ mkdir build_release
+   $ cd build_release
+   $ cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_C_FLAGS="-fPIC" ..
+   $ make
 
 >>> install different gcc toolsets on centos
   $ sudo yum install centos-release-scl
