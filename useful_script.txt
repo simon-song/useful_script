@@ -333,6 +333,44 @@ project. Now you are ready to go.
 
 
 =========================================================
+==              LAPACK + Windows 
+=========================================================
+
+Adapted from 
+https://icl.cs.utk.edu/lapack-for-windows/lapack/index.html#build
+
+>>> build LAPACK 3.10.0 on Windows with Intel compilers 2021.2:
+
+Requires:
+Intel oneAPI compilers version 2021.2 (later versions might fail to build with 
+Fortran ABI info detection error). To download this old version see:
+https://community.intel.com/t5/Intel-oneAPI-Registration/Where-can-I-find-older-versions-2021-2-of-Intel-OneAPI-Base-and/m-p/1298789
+
+(1) Download lapack 3.10.0 from the netlib website
+(2) Download and install cmake.
+(3) Open cmake-gui, select source directory and build directory, then click
+"Configure".
+(4) Add "Intel C++ Compiler 19.2" to the "Optional toolset to use" box, 
+select "Specify native compilers", then click "Next".
+(5) Choose the appropriate Intel compilers, e.g. on my machine, it is
+"D:/Program Files (x86)/oneAPI/compiler/2021.2.0/windows/bin/intel64/ifort.exe"
+for the Fortran compiler, and "icl.exe" for C and C++. Then click "Finish".
+(6) You may have to click "Configure" multiple times until every thing becomes
+white. Remember to select "LAPACKE" for the C-interface.
+(7) Click "Generate", this will create the Visual Studio Solution.
+(8) Go to your "build" directory, open "LAPACK.sln", build the solution, and the
+library files (blas.lib, lapack.lib, lapacke.lib, tmglib.lib) will be in 
+"build/lib/Release".
+
+###   lapack_cmake_1.png about here   ###
+###   lapack_cmake_2.png about here   ###
+###   lapack_cmake_3.png about here   ###
+
+To use these library files in Visual Studio without Intel compiler, you may need
+to link to several Intel libraries (included in LAPACKE_examples_x64 project).
+
+
+=========================================================
 ==                   PDF
 =========================================================
 
