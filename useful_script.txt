@@ -131,7 +131,7 @@ FFTW needs to be built using -fPIC:
   $ git branch -a   # list all branches (local and remote)
   $ git branch [BRANCH_NAME]     # create a new branch
   $ git branch -d [BRANCH_NAME]  # delete a branch
-  $ git checkout [BRANCH_NAME]   # swith to a branch
+  $ git checkout [BRANCH_NAME]   # switch to a branch
   $ git push -u origin [BRANCH_NAME]   # push local branch to the remote repository
   
  >>> undoing last shared public changes (see also 
@@ -203,6 +203,12 @@ FFTW needs to be built using -fPIC:
 back to the normal visual mode:
   : set ve=all
 
+>>> remove all whitespace
+  :%s/\s\+/,/g
+
+>>>  for each line, remove all characters after "//" if they contain " for " 
+  :%s/\/\/.* for .*$//g
+
 
 =========================================================
 ==                   perl 
@@ -258,6 +264,11 @@ on Insert.
 >>> to build a static library 
    $ cmake -DBUILD_SHARED_LIBS=OFF ..
 
+>>> set postfix for debug build library, e.g. xxx.lib-->xxx_dbg.lib
+   $ cmake -DCMAKE_DEBUG_POSTFIX=_dbg
+   
+>>> install library to a different prefix/directory (e.g. ./install)
+   $ cmake --install build-vs2022/ --prefix install   
 
 =========================================================
 ==                  Visual Studio + C++ 
