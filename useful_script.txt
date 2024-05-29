@@ -49,6 +49,9 @@ create a soft link for each directory:
    $ ./bootstrap.sh
    $ ./b2
    $ sudo ./b2 install
+   
+ to build with -fPIC:
+   $ ./b2 cxxflags=-fPIC 
 
 >>> jdpl on Linux (e.g. Centos)
    $ git clone https://jcode.jdfmgt.com/git/jda.jdpl.git
@@ -91,6 +94,18 @@ FFTW needs to be built using -fPIC:
 
 >>> redirect report of boost.test to a file
   $ ./test --report_level=detailed --report_sink=a.log
+  
+>>> Bloomberg BDE library: under Linux need to be compiled with -fPIC
+Edit file bde-tools/BdeBuildSystem/toolchains/linux/gcc-default.cmake,
+add -fPIC to both DEFAULT_CXX_FLAGS and DEFAULT_C_FLAGS (because
+BDE contains both C++ and C code). 
+  $ eval `bbs_build_env -u opt_64`  # set build environment
+  $ bbs_build configure -v  # -v shows cmake flags
+  $ bbs_build build
+  $ bbs_build install  # default at _install/opt/bb/lib64
+  
+See https://bloomberg.github.io/bde/library_information/build.html  
+   
 
 =========================================================
 ==                    git 
@@ -268,7 +283,9 @@ on Insert.
    $ cmake -DCMAKE_DEBUG_POSTFIX=_dbg
    
 >>> install library to a different prefix/directory (e.g. ./install)
-   $ cmake --install build-vs2022/ --prefix install   
+   $ cmake -G"Visual Studio 17 2022" -A x64 -B"build-vs2022" -DCMAKE_DEBUG_POSTFIX=_dbg
+   $ cmake --install build-vs2022/ --config Debug --prefix install
+   $ cmake --install build-vs2022/ --config Release --prefix install   
 
 =========================================================
 ==                  Visual Studio + C++ 
