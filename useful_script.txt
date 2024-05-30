@@ -149,10 +149,28 @@ See https://bloomberg.github.io/bde/library_information/build.html
   $ git checkout [BRANCH_NAME]   # switch to a branch
   $ git push -u origin [BRANCH_NAME]   # push local branch to the remote repository
   
- >>> undoing last shared public changes (see also 
- https://www.atlassian.com/git/tutorials/undoing-changes)
+>>> undoing last shared public changes (see also 
+https://www.atlassian.com/git/tutorials/undoing-changes)
    
-   $ git revert HEAD
+  $ git revert HEAD
+
+>>> check configuration
+
+  $ git config -l
+  $ git config --global -l   # global settings
+ 
+>>> set proxy:
+
+  $ git config --global http.proxy http://127.0.0.1:7890 
+
+to unset:
+
+  $ git config --global --unset http.proxy
+
+to clone with proxy:
+
+  $ git clone -c http.proxy=http://127.0.0.1:7890 https://github.com/grpc/grpc.git
+
  
 
 =========================================================
