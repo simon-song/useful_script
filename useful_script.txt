@@ -105,7 +105,15 @@ BDE contains both C++ and C code).
   $ bbs_build install  # default at _install/opt/bb/lib64
   
 See https://bloomberg.github.io/bde/library_information/build.html  
-   
+
+>>> compile cmake from source
+  $ ./configure
+  $ make
+  $ sudo make install  
+
+>>> trng on Linux
+  $ cd build_release
+  $ cmake -DCMAKE_BUILD_TYPE=Release -DBUILD_SHARED_LIBS=OFF -DCMAKE_INSTALL_PREFIX=../install  ..
 
 =========================================================
 ==                    git 
