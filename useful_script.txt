@@ -186,6 +186,17 @@ to clone with proxy:
 >>> start a web server on Mac OS X (i.e. localhost:8000):
   $ python -m SimpleHTTPServer 8000
 
+>>> venv (under windows)
+  $ python -m venv .venv
+  $ .venv\Scripts\activate.bat   # activate venv
+  $ pip install polars
+  $ pip install nuitka  # for packaging python code
+  
+>>> nuitka: compile and package python code  
+  (1) create a virtual environment venv with only polars and nuitka installed
+  (2) run nuitka to create standalone program (useable on another computer):
+    $ nuitka --standalone --show-memory --show-progress --nofollow-imports --nofollow-import-to=numpy,pandas,matplotlib,sqlalchemy --follow-import-to=polars  --output-dir=output calc_greeks2.py
+  this will create calc_greeks2.exe under directory output/calc_greeks2.dist.  
 
 =========================================================
 ==                    vim 
